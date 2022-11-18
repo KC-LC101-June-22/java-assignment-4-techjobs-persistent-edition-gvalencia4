@@ -20,9 +20,9 @@ public class Skill extends AbstractEntity {
     public Skill() {
     }
 
-    Skill(String description) {
-        this();
+    public Skill(String description, List<Job> jobs) {
         this.description = description;
+        this.jobs = jobs;
     }
 
     public String getDescription() {
