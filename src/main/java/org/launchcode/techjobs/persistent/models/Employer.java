@@ -23,10 +23,10 @@ public class Employer extends AbstractEntity {
 
     public Employer() {}
 
-    public Employer (String location) {
-        this();
-        this.location = location;
-    }
+//    public Employer (String location) {
+//        this();
+//        this.location = location;
+//    }
 
     public String getLocation() {
         return location;
@@ -38,6 +38,10 @@ public class Employer extends AbstractEntity {
 
     public List<Job> getJobs() {
         return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 
     @Override
