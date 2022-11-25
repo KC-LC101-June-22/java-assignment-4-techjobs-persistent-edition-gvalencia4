@@ -2,6 +2,7 @@ package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Objects;
 @Entity
 public class Skill extends AbstractEntity {
 
+    @NotBlank
     @Size(max = 200)
     private String description;
 
@@ -19,7 +21,7 @@ public class Skill extends AbstractEntity {
     public Skill() {
     }
 
-    Skill(String description) {
+    public Skill(String description) {
         this();
         this.description = description;
     }
