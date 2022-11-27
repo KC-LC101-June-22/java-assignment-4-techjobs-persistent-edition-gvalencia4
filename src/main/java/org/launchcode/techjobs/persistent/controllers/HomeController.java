@@ -1,6 +1,6 @@
 package org.launchcode.techjobs.persistent.controllers;
 
-import org.launchcode.techjobs.persistent.models.Employer;
+import org.jetbrains.annotations.NotNull;
 import org.launchcode.techjobs.persistent.models.Job;
 import org.launchcode.techjobs.persistent.models.Skill;
 import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
@@ -79,7 +79,7 @@ public class HomeController {
     }
 
     @GetMapping("view/{jobId}")
-    public String displayViewJob(Model model, @PathVariable int jobId) {
+    public String displayViewJob(@NotNull Model model, @PathVariable int jobId) {
 
         model.addAttribute("job", jobRepository.findById(jobId));
 
